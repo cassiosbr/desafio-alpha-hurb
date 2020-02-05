@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">D-alpha hurb</string>
+    <string name="title_hoteis">Hoteis</string>
+    <string name="title_pacotes">Pacotes</string>
+    <string name="title_sonhos">Ofertas</string>
+    <string name="title_buscar">Buscar</string>
+</resources>
