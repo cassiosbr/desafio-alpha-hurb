@@ -33,7 +33,7 @@ Apresenta nome, preço, a foto, as comodidades e a quantidade de estrelas dos ho
 
 # Testes
 
-Os testes foram executados eliminando erros como por exemplo o carregamento da API. Se algum dado da api for vazia, eliminamos o valor nulo, e a listagem continua.
+Os testes foram executados eliminando erros como por exemplo o carregamento da API. Se algum dado da API for vazia, eliminamos o valor nulo, e a listagem continua.
 
 Se a API retornar vazia a aplicação é carregada sem valores, evitando falha na execução do aplicativo.
 
