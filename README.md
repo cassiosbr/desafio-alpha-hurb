@@ -1,6 +1,6 @@
 # Desafio Alpha Hurb
 
-A instalação da aplicação é feita através do Android Android Studio, basta somente conectar o cabo USB no PC, e executar o Build
+A instalação da aplicação é feita através do Android Android Studio, basta somente conectar o cabo USB no PC, e executar o Build.
 
 A aplicação contém 5 Telas:
 
@@ -10,13 +10,13 @@ Esas informações sõa apresentadas de acordo com a quantidade de estrelas, na 
 
 
 # Tela com os Detalhes dos Hoteis
-Além das informações da tela anterior, nessa tela apresenta descrição do hotel
+Além das informações da tela anterior, nessa tela apresenta descrição do hotel.
 
 # Tela com Informações do Aplicativo
 Versão do aplicativo e nome do desenvolvedor da aplicação
 
 # Tela com os Pacotes
-Informações do Pacote de viagens.
+Informações do Pacote de viagens:
 
 - Nome do Pacote
 - Cidade e Estado
