@@ -23,7 +23,9 @@ Informações do Pacote de viagens:
 - Preço
 
 Obs1.: Nessa tela, a imagem e as 'amenities', não estão sendo exibidas. Essas informações ficaram em falta nessa tela.
-Obs.: a api https://www.hurb.com/search/api?q=buzios&page=1, na maioria das vezes não retorna as informações do pacote, quando isso acontece, a tela do pacote fica em branco.
+
+
+Obs2.: a api https://www.hurb.com/search/api?q=buzios&page=1, na maioria das vezes não retorna as informações do pacote, quando isso acontece, a tela do pacote fica em branco.
 
 # Tela com busca aos Hoteis
 Apresenta nome, preço, a foto, as comodidades e a quantidade de estrelas dos hoteis, e contém um campo para fazer a busca pelo nome do hotel.
