@@ -29,3 +29,13 @@ Obs2.: a api https://www.hurb.com/search/api?q=buzios&page=1, na maioria das vez
 
 # Tela com busca aos Hoteis
 Apresenta nome, preço, a foto, as comodidades e a quantidade de estrelas dos hoteis, e contém um campo para fazer a busca pelo nome do hotel.
+
+
+# Testes
+
+Os testes foram executados eliminando erros como por exemplo o carregamento da API. Se algum dado da api for vazia, eliminamos o valor nulo, e a listagem continua.
+
+Se a API retornar vazia a aplicação é carregada sem valores, evitando falha na execução do aplicativo.
+
+Se o dispositivo estiver sem conexão a internet, é exibido uma tela dizendo que esta com falta de conexao, evitando que o aplicativo falhe e feche.
+
