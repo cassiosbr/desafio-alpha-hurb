@@ -10,18 +10,15 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.desafioalphahurb.R;
-import com.example.desafioalphahurb.fragment.BuscarFragment;
-import com.example.desafioalphahurb.function.CompararStars;
+import com.example.desafioalphahurb.activitites.BuscarHotelActivity;
 import com.example.desafioalphahurb.model.Hotel;
 import com.squareup.picasso.Picasso;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Locale;
 
-public class BuscarHotelAdapter  extends BaseAdapter {
+public class BuscarHotelAdapter extends BaseAdapter {
 
     Context mContext;
     LayoutInflater inflater;
@@ -32,7 +29,7 @@ public class BuscarHotelAdapter  extends BaseAdapter {
         mContext = context;
         inflater = LayoutInflater.from(mContext);
         this.arraylist = new ArrayList<Hotel>();
-        this.arraylist.addAll(BuscarFragment.hotelNameArrayList);
+        this.arraylist.addAll(BuscarHotelActivity.hotelNameArrayList);
     }
 
     //AUXILIA NO PROCESSAMENTO DOS DADOS DOS HOTEIS
@@ -46,12 +43,12 @@ public class BuscarHotelAdapter  extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return BuscarFragment.hotelNameArrayList.size();
+        return BuscarHotelActivity.hotelNameArrayList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return BuscarFragment.hotelNameArrayList.get(position);
+        return BuscarHotelActivity.hotelNameArrayList.get(position);
     }
 
     @Override
@@ -59,7 +56,7 @@ public class BuscarHotelAdapter  extends BaseAdapter {
         return position;
     }
 
-    //PROCESA DOS DADOS DA CLASSE 'ViewHolder'
+    //PROCESSA DOS DADOS DA CLASSE 'ViewHolder'
     @Override
     public View getView(int position, View view, ViewGroup parent) {
 
@@ -81,13 +78,13 @@ public class BuscarHotelAdapter  extends BaseAdapter {
         }
 
         //MONTA UM ARRAY STRING COM LIMITADOR '_limitador;' PARA APRESENTAR CADA INFORMAÇÃO DO HOTEL NO 'ListView'
-        String resultadoString = BuscarFragment.hotelNameArrayList.get(position).getHotelNames();
+        String resultadoString = BuscarHotelActivity.hotelNameArrayList.get(position).getHotelNames();
         String[] limitador = resultadoString.split("_limitador;");
 
         //CONVERTE A STRING PARA O FORMADO DE MOEDA/REAL
         NumberFormat nf = NumberFormat.getCurrencyInstance();
 
-        // Set the results into TextViews
+        // SET OS RESULTODOS DO TEXTVIEW
         holder.name.setText(limitador[0]);
         holder.city.setText(limitador[1]);
         holder.price.setText(nf.format(Double.parseDouble(limitador[2])));
@@ -98,15 +95,15 @@ public class BuscarHotelAdapter  extends BaseAdapter {
     }
 
     // FAZ O FILTRO DOS DADOS
-    public void filter(String charText) {
+    public void filtrar(String charText) {
         charText = charText.toLowerCase(Locale.getDefault());
-        BuscarFragment.hotelNameArrayList.clear();
+        BuscarHotelActivity.hotelNameArrayList.clear();
         if (charText.length() == 0) {
-            BuscarFragment.hotelNameArrayList.addAll(arraylist);
+            BuscarHotelActivity.hotelNameArrayList.addAll(arraylist);
         } else {
             for (Hotel wp : arraylist) {
                 if (wp.getHotelNames().toLowerCase(Locale.getDefault()).contains(charText)) {
-                    BuscarFragment.hotelNameArrayList.add(wp);
+                    BuscarHotelActivity.hotelNameArrayList.add(wp);
                 }
             }
         }

@@ -12,9 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitites.MainActivity"></activity>
-        <activity android:name=".activitites.SemConexaoActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activitites.BuscarHotelActivity"></activity>
+        <activity android:name=".activitites.MainActivity" />
+        <activity
+            android:name=".activitites.SemConexaoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activitites.DetalheHotelActivity" />
         <activity
             android:name=".activitites.SplashScreenActivity"

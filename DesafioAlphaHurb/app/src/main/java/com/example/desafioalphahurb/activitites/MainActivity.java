@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_hoteis, R.id.navigation_info)
+                R.id.navigation_hoteis, R.id.navigation_pacotes, R.id.navigation_info)
                 .build();
 
         //APREENTA O MENU NO RODAPÉ DA MainActivity
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
-    /*@Override
+    @Override
     public  boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu, menu);
 
@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.buscar){
-            Intent intent = new Intent(getBaseContext(), BuscarActivity.class);
+            Intent intent = new Intent(getBaseContext(), BuscarHotelActivity.class);
             startActivity(intent);
             return  true;
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 }
