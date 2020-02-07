@@ -58,15 +58,34 @@
                     android:id="@+id/cidade_detalhes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="City, State"
                     android:textSize="12dp"
                     android:textAllCaps="true"
                     android:textColor="#999"/>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_preco_detalhes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/layout_cidade_detalhe">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="A partir de"
+                    android:textColor="#999"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="15dp"
@@ -80,6 +99,16 @@
                     android:stepSize="0.1"
                     android:rating="5.0"
                     android:progressTint="#FFA500"/>
+
+                <TextView
+                    android:id="@+id/preco_detalhes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:text="Price"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FF4500"
+                    android:gravity="end"/>
 
             </LinearLayout>
 
@@ -99,33 +128,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="16dp"
                     android:textColor="#000"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layout_preco_detalhes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"
-                android:layout_below="@+id/cidade_detalhes">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:text="A partir de"
-                    android:textColor="#999"
-                    android:gravity="end" />
-
-                <TextView
-                    android:id="@+id/preco_detalhes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="#FF4500"
-                    android:gravity="end"/>
             </LinearLayout>
 
             <LinearLayout

@@ -51,7 +51,6 @@
                 android:id="@+id/amenities"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amenities"
                 android:textSize="12dp"
                 android:textColor="@android:color/darker_gray"/>
 

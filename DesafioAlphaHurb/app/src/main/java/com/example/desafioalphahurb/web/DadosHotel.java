@@ -18,10 +18,9 @@ public class DadosHotel {
             String description = jsonPost.getString("description");
             Integer stars = jsonPost.getInt("stars");
             String image = jsonPost.getString("image");
-            String gallery = jsonPost.getString("image");
             String amenities = jsonPost.getJSONObject("featuredItem").getString("amenities");
 
-            hotel = new Hotel(name, city, state, price, description, stars, image, gallery, amenities);
+            hotel = new Hotel(name, city, state, price, description, stars, image, amenities);
 
         } catch (JSONException e) {
             e.printStackTrace();

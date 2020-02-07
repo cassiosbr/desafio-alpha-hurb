@@ -39,6 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, int position) {
 
+        //ORDERNAR A LISTA PELA ORDEM DECRESCENTE DE ESTRELAS DO HOTEL
         Collections.sort(listHotel, new CompararStars());
 
         holder.name.setText(listHotel.get(position).getName());
@@ -48,22 +49,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.price.setText(nf.format(Double.parseDouble(listHotel.get(position).getPrice())));
         holder.stars.setNumStars(listHotel.get(position).getStars());
 
-       /* if (listHotel.get(position).getStars() == 1) {
-            holder.stars.setNumStars(1);
-
-        } else if (listHotel.get(position).getStars() == 2) {
-            holder.stars.setNumStars(2);
-
-        } else if (listHotel.get(position).getStars() == 3) {
-            holder.stars.setNumStars(3);
-
-        } else if (listHotel.get(position).getStars() ==  4) {
-            holder.stars.setNumStars(4);
-
-        } else if (listHotel.get(position).getStars() == 5) {
-            holder.stars.setNumStars(5);
-        }*/
-
+        //MONTA UM ARRAY, PARA LISTAR AS 'Amenities'
         String[] array = listHotel.get(position).getAmenities().
                 replace("[","").
                 replace("]","").
@@ -71,12 +57,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 replace("\\","").
                 split(",");
 
+        //TRATA O ERRO, CASO ALGUMA 'Amenities' SEJA NULA
         try {
             holder.amenities.setText(array[0] + " • " + array[1] + " • " + array[2]);
         } catch (Exception e) {
             Log.d("AMENITIES", e.getMessage());
         }
 
+        // A BIBLIOTECA 'PICASSO' CARREA AS IMAGENS DOS HOTEIS
         Picasso.with(context).load(listHotel.get(position).getImage()).into(holder.image);
     }
 

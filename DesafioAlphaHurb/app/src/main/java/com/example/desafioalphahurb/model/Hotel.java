@@ -10,23 +10,9 @@ public class Hotel {
     public String description;
     public Integer stars;
     public String image;
-    public String gallery;
     public String amenities;
 
-    public String getHotelNames() {
-        return this.name;
-    }
-
-    public Hotel(String name) {
-        this.name = name;
-    }
-
-    public Hotel(Integer index, Integer stars) {
-        this.index = index;
-        this.stars = stars;
-    }
-
-    public Hotel(String name, String city, String state, String price, String description, Integer stars, String image, String gallery, String amenities) {
+    public Hotel(String name, String city, String state, String price, String description, Integer stars, String image, String amenities) {
         this.name = name;
         this.city = city;
         this.state = state;
@@ -34,7 +20,6 @@ public class Hotel {
         this.description = description;
         this.stars = stars;
         this.image = image;
-        this.gallery = gallery;
         this.amenities = amenities;
     }
 
@@ -46,19 +31,6 @@ public class Hotel {
         this.price = price;
         this.stars = stars;
         this.image = image;
-        this.amenities = amenities;
-    }
-
-    public Hotel(Integer index, String name, String city, String state, String price, String description, Integer stars, String image, String gallery, String amenities) {
-        this.index = index;
-        this.name = name;
-        this.city = city;
-        this.state = state;
-        this.price = price;
-        this.description = description;
-        this.stars = stars;
-        this.image = image;
-        this.gallery = gallery;
         this.amenities = amenities;
     }
 
@@ -124,14 +96,6 @@ public class Hotel {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public String getGallery() {
-        return gallery;
-    }
-
-    public void setGallery(String gallery) {
-        this.gallery = gallery;
     }
 
     public String getAmenities() {

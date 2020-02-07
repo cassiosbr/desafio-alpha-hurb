@@ -48,7 +48,12 @@ public class HoteisFragment extends Fragment {
 
         recyclerViewAdapter = new RecyclerViewAdapter(listHoteis, getContext());
 
-        carregarHoteis();
+        //TRATA O ERRRO CASO ALGUM DADO SEJA NULO
+        try {
+                carregarHoteis();
+        } catch (Exception e) {
+            Log.d("Erro", e.getMessage());
+        }
 
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this,
                 recyclerView, new ClickListener() {
@@ -58,7 +63,6 @@ public class HoteisFragment extends Fragment {
 
             @Override
             public void onClick(View view, final int position) {
-                //Values are passing to activity & to fragment as well
 
                 params.putInt("index", listHoteis.get(position).getIndex());
                 intent.putExtras(params);
@@ -68,11 +72,6 @@ public class HoteisFragment extends Fragment {
                 image.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //Toast.makeText(getActivity(), "Single Click on Image :"+position,
-                                //Toast.LENGTH_SHORT).show();
-                        /*params.putInt("id", listHoteis.get(position).getId());
-                        intent.putExtras(params);
-                        startActivity(intent);*/
                     }
                 });
             }
@@ -87,7 +86,7 @@ public class HoteisFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
 
-       Log.d("JSON HOTEIS", listHoteis.toString());
+        Log.d("JSON HOTEIS", listHoteis.toString());
 
         return root;
     }

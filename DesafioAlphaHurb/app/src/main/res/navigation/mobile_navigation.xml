@@ -11,21 +11,9 @@
         android:label="@string/title_hoteis"
         tools:layout="@layout/fragment_hoteis" />
 
-    <!--<fragment
-        android:id="@+id/navigation_pacotes"
-        android:name="com.example.desafioalphahurb.fragment.PacotesFragment"
-        android:label="@string/title_pacotes"
-        tools:layout="@layout/fragment_pacotes" />-->
-
-    <!--<fragment
-        android:id="@+id/navigation_sonhos"
-        android:name="com.example.desafioalphahurb.fragment.SonhosFragment"
-        android:label="@string/title_sonhos"
-        tools:layout="@layout/fragment_sonhos" />-->
-
     <fragment
-        android:id="@+id/navigation_buscar"
-        android:name="com.example.desafioalphahurb.fragment.BuscarFragment"
-        android:label="@string/title_buscar"
-        tools:layout="@layout/fragment_buscar" />
+        android:id="@+id/navigation_info"
+        android:name="com.example.desafioalphahurb.fragment.InformacoesFragment"
+        android:label="@string/title_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

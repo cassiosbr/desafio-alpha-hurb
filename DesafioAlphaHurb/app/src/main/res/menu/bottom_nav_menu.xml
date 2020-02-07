@@ -7,19 +7,9 @@
         android:icon="@drawable/ic_hoteis_black_24dp"
         android:title="@string/title_hoteis" />
 
-    <!--<item
-        android:id="@+id/navigation_pacotes"
-        android:icon="@drawable/ic_pacotes_black_24dp"
-        android:title="@string/title_pacotes"/>-->
-
-    <!--<item
-    android:id="@+id/navigation_sonhos"
-    android:icon="@drawable/ic_sonhos_black_24dp"
-    android:title="@string/title_sonhos"/>-->
-
     <item
-        android:id="@+id/navigation_buscar"
-        android:icon="@drawable/ic_buscar_black_24dp"
-        android:title="@string/title_buscar" />
+        android:id="@+id/navigation_info"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="@string/title_info" />
 
 </menu>
