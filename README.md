@@ -22,10 +22,7 @@ Informações do Pacote de viagens:
 - Cidade e Estado
 - Preço
 
-Obs1.: Nessa tela, a imagem e as 'amenities', não estão sendo exibidas. Essas informações ficaram em falta nessa tela.
-
-
-Obs2.: a api https://www.hurb.com/search/api?q=buzios&page=1, na maioria das vezes não retorna as informações do pacote, quando isso acontece, a tela do pacote fica em branco.
+Obs.: A API https://www.hurb.com/search/api?q=buzios&page=1, na maioria das vezes não retorna as informações do pacote, quando isso acontece, a aplicação exibe uma mensagem para acessar essa tela mais tarde.
 
 # Tela com busca aos Hoteis
 Apresenta nome, preço, a foto, as comodidades e a quantidade de estrelas dos hoteis, e contém um campo para fazer a busca pelo nome do hotel.
