@@ -35,7 +35,7 @@ Informações do Pacote de viagens:
 - Preço
 
 <p align="center">
-  <img src="pacote.png" alt="Hotéis" />
+  <img src="pacotes.png" alt="Hotéis" />
 </p>
 
 Obs.: A API https://www.hurb.com/search/api?q=buzios&page=1, na maioria das vezes não retorna as informações do pacote, quando isso acontece, a aplicação exibe uma mensagem para acessar essa tela mais tarde.
@@ -44,7 +44,7 @@ Obs.: A API https://www.hurb.com/search/api?q=buzios&page=1, na maioria das veze
 Apresenta nome, preço, a foto, as comodidades e a quantidade de estrelas dos hotéis, e contém um campo para fazer a busca pelo nome do hotel.
 
 <p align="center">
-  <img src="busca.png" alt="Buscar Hotel" />
+  <img src="buscar.png" alt="Buscar Hotel" />
 </p>
 
 
