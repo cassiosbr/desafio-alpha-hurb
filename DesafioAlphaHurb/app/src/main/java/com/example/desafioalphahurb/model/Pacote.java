@@ -1,7 +1,5 @@
 package com.example.desafioalphahurb.model;
 
-import org.json.JSONObject;
-
 public class Pacote {
 
     public String name;
@@ -10,22 +8,6 @@ public class Pacote {
     public String price;
     public String image;
     public String amenities;
-
-
-    public Pacote(String name, String city, String state, String price) {
-        this.name = name;
-        this.city = city;
-        this.state = state;
-        this.price = price;
-    }
-
-    public Pacote(String name, String city, String state, String price, String image) {
-        this.name = name;
-        this.city = city;
-        this.state = state;
-        this.price = price;
-        this.image = image;
-    }
 
     public Pacote(String name, String city, String state, String price, String image, String amenities) {
         this.name = name;

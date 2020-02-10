@@ -1,7 +1,10 @@
 package com.example.desafioalphahurb.web;
 
+import android.util.Log;
+
 import com.example.desafioalphahurb.model.Hotel;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,7 +21,16 @@ public class DadosHotel {
             String description = jsonPost.getString("description");
             Integer stars = jsonPost.getInt("stars");
             String image = jsonPost.getString("image");
-            String amenities = jsonPost.getJSONObject("featuredItem").getString("amenities");
+
+            String _amenities = jsonPost.getString("amenities");
+            JSONArray amenities_array = new JSONArray(_amenities);
+
+            String amenities = "";
+            for (int i = 0; i < amenities_array.length(); i++) {
+                //MONTA UM ARRAY, QUE SERA CARREGADO NA CLASSE, RecyclerViewAdapter
+                JSONObject childObject = amenities_array.getJSONObject(i);
+                amenities = amenities + childObject.getString("name") + ";";
+            }
 
             hotel = new Hotel(name, city, state, price, description, stars, image, amenities);
 

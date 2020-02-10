@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,7 +15,6 @@ import com.example.desafioalphahurb.R;
 import com.example.desafioalphahurb.layout.RecyclerViewPacoteAdapter;
 import com.example.desafioalphahurb.model.Pacote;
 import com.example.desafioalphahurb.task.PacoteAsyncTask;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -56,9 +56,16 @@ public class PacotesFragment extends Fragment {
 
         Log.d("JSON PACOTES", listPacotes.toString());
 
+        // SE A RESPOSTA DA API FOR VAZIA, IMPRIMIMOS UMA MENSAGEM NO TEXTVIEW
+        TextView mensagem = (TextView) root.findViewById(R.id.mensagem);
+        if (listPacotes.size() == 0) {
+            mensagem.setText("As informações dos pacotes estão indisponíveis no momento, por favor, tente mais tarde.");
+        }
+
         return root;
     }
 
+    //MONTA A LISTA COMS OS DADOS DOS PACOTES
     private void carregarPacotes(){
 
         Pacote pacote;

@@ -1,6 +1,7 @@
 package com.example.desafioalphahurb.layout;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,19 +43,14 @@ public class RecyclerViewPacoteAdapter extends RecyclerView.Adapter<RecyclerView
         holder.price.setText(nf.format(Double.parseDouble(listPacotes.get(position).getPrice())));
 
         //MONTA UM ARRAY, PARA LISTAR AS 'Amenities'
-        /*String[] array = listPacote.get(position).getAmenities().
-                replace("[","").
-                replace("]","").
-                replace("\"","").
-                replace("\\","").
-                split(",");
+        String[] array = listPacotes.get(position).getAmenities().split(";");
 
         //TRATA O ERRO, CASO ALGUMA 'Amenities' SEJA NULA
-        /*try {
+        try {
             holder.amenities.setText(array[0] + " • " + array[1] + " • " + array[2]);
         } catch (Exception e) {
             Log.d("AMENITIES", e.getMessage());
-        }*/
+        }
 
         // A BIBLIOTECA 'PICASSO' CARREA AS IMAGENS DOS PACOTES
         Picasso.with(context).load(listPacotes.get(position).getImage()).into(holder.image);

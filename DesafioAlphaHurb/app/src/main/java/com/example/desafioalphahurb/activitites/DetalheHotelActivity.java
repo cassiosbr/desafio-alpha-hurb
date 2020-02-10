@@ -73,10 +73,7 @@ public class DetalheHotelActivity extends AppCompatActivity {
 
         TextView amenities = (TextView) findViewById(R.id.amenities_dados_detalhes);
         amenities.setText(Hotels.get(index).getAmenities().
-                replace("[","").
-                replace("]","").
-                replace("\"","").
-                replace("\\",""));
+                replace(";",", "));
 
     }
 

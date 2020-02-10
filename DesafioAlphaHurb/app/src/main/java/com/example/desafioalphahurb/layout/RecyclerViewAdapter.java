@@ -50,12 +50,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.stars.setNumStars(listHotel.get(position).getStars());
 
         //MONTA UM ARRAY, PARA LISTAR AS 'Amenities'
-        String[] array = listHotel.get(position).getAmenities().
-                replace("[","").
-                replace("]","").
-                replace("\"","").
-                replace("\\","").
-                split(",");
+        String[] array = listHotel.get(position).getAmenities().split(";");
 
         //TRATA O ERRO, CASO ALGUMA 'Amenities' SEJA NULA
         try {

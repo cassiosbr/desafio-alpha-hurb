@@ -95,14 +95,14 @@ public class BuscarHotelAdapter extends BaseAdapter {
     }
 
     // FAZ O FILTRO DOS DADOS
-    public void filtrar(String charText) {
-        charText = charText.toLowerCase(Locale.getDefault());
+    public void filtrar(String texto) {
+        texto = texto.toLowerCase(Locale.getDefault());
         BuscarHotelActivity.hotelNameArrayList.clear();
-        if (charText.length() == 0) {
+        if (texto.length() == 0) {
             BuscarHotelActivity.hotelNameArrayList.addAll(arraylist);
         } else {
             for (Hotel wp : arraylist) {
-                if (wp.getHotelNames().toLowerCase(Locale.getDefault()).contains(charText)) {
+                if (wp.getHotelNames().toLowerCase(Locale.getDefault()).contains(texto)) {
                     BuscarHotelActivity.hotelNameArrayList.add(wp);
                 }
             }
