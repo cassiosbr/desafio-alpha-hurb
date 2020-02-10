@@ -8,6 +8,10 @@ A aplicação contém 5 Telas:
 Apresenta informações dos hotéis, como por exemplo, nome, preço, a foto, as comodidades e a quantidade de estrelas.
 Essas informações são apresentadas de acordo com a quantidade de estrelas, na ordem decrescente.
 
+<p align="center">
+  <img src="hoteis.png" alt="Hotéis" />
+</p>
+
 
 # Tela com os Detalhes dos Hotéis
 Além das informações da tela anterior, nessa tela apresenta descrição do hotel.
